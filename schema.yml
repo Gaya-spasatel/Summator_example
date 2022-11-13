@@ -1,0 +1,38 @@
+openapi: 3.0.3
+info:
+  title: Summator API
+  version: 1.0.0
+  description: API that sums two integer operands
+paths:
+  /api/{a}/{b}:
+    get:
+      operationId: api_retrieve
+      parameters:
+      - in: path
+        name: a
+        schema:
+          type: integer
+        required: true
+      - in: path
+        name: b
+        schema:
+          type: integer
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
