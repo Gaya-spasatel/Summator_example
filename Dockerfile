@@ -18,4 +18,4 @@ EXPOSE 8000
 
 # runs the production server
 ENTRYPOINT ["python", "./manage.py"]
-CMD ["runserver", "127.0.0.1:8000"]
+CMD ["runserver", "0.0.0.0:8000"]
