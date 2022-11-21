@@ -18,7 +18,7 @@ WORKDIR /app
 RUN ln -s ~/app/nginx_conf/app_nginx.conf /etc/nginx/sites-enabled/
 
 RUN python ./manage.py migrate
-# RUN python manage.py collectstatic
+RUN python manage.py collectstatic
 
 EXPOSE 8000
 EXPOSE 80
