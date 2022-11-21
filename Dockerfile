@@ -16,6 +16,6 @@ RUN python ./manage.py migrate
 
 EXPOSE 8000
 
-# runs the production server
+# runs the development server
 ENTRYPOINT ["python", "./manage.py"]
 CMD ["runserver", "0.0.0.0:8000"]
