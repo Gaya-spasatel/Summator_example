@@ -5,7 +5,7 @@ services:
     container_name: django_app
     env_file:
       - .env
-    entrypoint: ['uwsgi', '--http', ':8000', '--module', "${WSGI_APPLICATION_NAME}"]
+    entrypoint: ['uwsgi', '--socket', ':8000', '--module', "${WSGI_APPLICATION_NAME}"]
     restart: always
     ports:
       - "8000:8000"
