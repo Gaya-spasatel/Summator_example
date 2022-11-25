@@ -5,10 +5,6 @@
 FROM python:3.9
 
 RUN apt update
-RUN apt-get -y install nginx && service nginx start
-COPY ./nginx_conf/app_nginx.conf /etc/nginx/sites-enabled/
-RUN apt install systemctl && systemctl enable nginx
-#RUN service nginx restart
 
 
 # Allows docker to cache installed dependencies between builds
