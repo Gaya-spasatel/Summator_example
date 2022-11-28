@@ -12,4 +12,5 @@ urlpatterns = [
         ),
         name="swagger-ui",
     ),
+    path('img', views.ImageFromPillowView.as_view(), name="image")
 ]

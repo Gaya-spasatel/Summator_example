@@ -8,3 +8,9 @@ class Summator:
         self.second_operand = second_operand
         self.result = result
         self.operation = '+'
+
+
+class ImageFromPillow:
+    def __init__(self, image_base64, encoding):
+        self.image_base64 = image_base64
+        self.encoding = encoding
