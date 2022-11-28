@@ -12,7 +12,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . app
 WORKDIR /app
 
-RUN python ./manage.py migrate && python ./manage.py collectstatic
+RUN python ./manage.py migrate
+RUN python ./manage.py collectstatic
 
 EXPOSE 8000
 
